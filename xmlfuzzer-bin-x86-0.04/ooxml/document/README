@@ -1,0 +1,30 @@
+Quickstart:
+
+  wget http://komar.bitcheese.net/src/xmlfuzzer/schemes/OfficeOpenXML-XMLSchema.tar.gz
+  tar -xf OfficeOpenXML-XMLSchema.tar.gz
+  ./ooxml/ooxml.bash OfficeOpenXML-XMLSchema.tar.gz
+
+First, you need to download a schema of this crappy format from http://komar.bitcheese.net/src/xmlfuzzer/schemes/. Then extract it in any directory.
+
+OOXML document is not just a XML file but a zip-archive which contains several files. I've written all necessary for generating valid OOXML-documents and store it in ooxml/ directory in the distribution of xmlfuzzer.
+
+And then run ooxml/ooxml.bash to generate 1000000 OOXML-samples:
+
+$ ./ooxml/ooxml.bash path-to-OOXML-schema
+
+But it will work very slow because all operations will be running sequentially. If you don't want to fall asleep at your workplace, use parallel version of this script (which requires GNU parallel):
+
+$ ./ooxml/ooxml-parallel.bash path-to-OOXML-schema
+
+If you want to make XML files more readable, install tidy and replace in ooxml-iter.bash these lines:
+
+  cp $batch/$file $base/word/document.xml
+  # replace with this line if you want pretty-printing
+  #tidy -xml -i -utf8 < $batch/$file 2> /dev/null > $base/word/document.xml;
+
+by these:
+
+  #cp $batch/$file $base/word/document.xml
+  # replace with this line if you want pretty-printing
+  tidy -xml -i -utf8 < $batch/$file 2> /dev/null > $base/word/document.xml;
+

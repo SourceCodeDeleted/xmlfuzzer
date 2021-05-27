@@ -1,0 +1,59 @@
+xmlfuzzer — an XML fuzzing tool
+====================================================
+ * xmlfuzzer is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * xmlfuzzer is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with xmlfuzzer.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Copyright 2010-2011 Alexander Markov <apsheronets@gmail.com>
+
+Description :
+-------------
+
+Xmlfuzzer takes XML Scheme on input and returns valid XML document with random data.
+
+Building :
+----------
+
+First you need to get:
+* an OCamlduce compiler >= 3.11 (http://www.cduce.org/ocaml);
+* GNU Make (http://www.gnu.org/software/make/);
+* xml-light (http://tech.motion-twin.com/xmllight.html);
+* extlib for OCaml (http://code.google.com/p/ocaml-extlib/).
+
+Then simply run
+
+> make
+
+Getting pre-builded binaries :
+------------------------------
+
+Compiling OCamlduce application is not too funny, so you can just download pre-compiled binaries.
+
+http://komar.bitcheese.net/src/xmlfuzzer/bin/
+
+Runtime dependencies :
+----------------------
+
+Optionally you need these runtime dependecies:
+* tidy — just for pretty-printing (http://tidy.sourceforge.net/);
+* GNU parallel — a tool for executing jobs in parallel (http://www.gnu.org/software/parallel/).
+
+Usage :
+------
+
+See here: http://komar.bitcheese.net/en/code/xmlfuzzer
+
+Contact information :
+---------------------
+
+Alexander Markov <apsheronets@gmail.com>
+

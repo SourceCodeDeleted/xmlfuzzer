@@ -1,0 +1,23 @@
+<w:document xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>
+    <w:sdt>
+      <w:sdtContent>
+        <w:sdt>
+          <w:sdtPr />
+        </w:sdt>
+      </w:sdtContent>
+    </w:sdt>
+    <w:sectPr w:rsidDel="Be0N" w:rsidRPr="-4R^">
+      <w:footerReference w:type="default" r:id="" />
+      <w:footnotePr>
+        <w:pos w:val="pageBottom" />
+        <w:numStart w:val="1584397285253833485" />
+        <w:numRestart w:val="continuous" />
+      </w:footnotePr>
+      <w:endnotePr>
+        <w:numStart w:val="-4241193316720752020" />
+      </w:endnotePr>
+    </w:sectPr>
+  </w:body>
+</w:document>
